@@ -1,4 +1,4 @@
-jest.mock("fs");
+npm testjest.mock("fs");
 
 const fs = require("fs");
 const path = require("path");
