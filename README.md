@@ -7,6 +7,8 @@ A Node.js command-line quiz app for preparing for **Microsoft certification exam
 | Exam | Description |
 |---|---|
 | **AI-102** | Designing and Implementing a Microsoft Azure AI Solution |
+| **AZ-104** | Microsoft Azure Administrator |
+| **AZ-305** | Architecting Microsoft Azure Solutions |
 | **GH-300** | GitHub Foundations _(coming soon)_ |
 
 Adding a new exam is as simple as dropping a folder into `exams/` (see [Adding a New Exam](#adding-a-new-exam) below).
@@ -26,9 +28,11 @@ If multiple exams are available you'll see a selection menu:
           Available Exams
 =============================================
   1. AI-102
-  2. GH-300
+  2. AZ-104
+  3. AZ-305
+  4. GH-300
 
-Select exam (1-2):
+Select exam (1-4):
 ```
 
 When only one exam has questions, it is auto-selected.
@@ -79,13 +83,23 @@ ms-cert-quiz/
 ├── package.json
 ├── exams/
 │   ├── AI-102/
-│   │   ├── categories.json  # Category definitions, weights, quiz allocation
-│   │   ├── questions.json   # Question pool (300 questions)
-│   │   └── AI-102-cheat-sheet-with-python-snippets.md  # Study reference
+│   │   ├── categories.json
+│   │   ├── questions.json
+│   │   └── AI-102-cheat-sheet-with-python-snippets.md
+│   ├── AZ-104/
+│   │   ├── categories.json
+│   │   ├── questions.json
+│   │   └── AZ-104-cheat-sheet.md
+│   ├── AZ-305/
+│   │   ├── categories.json
+│   │   ├── questions.json
+│   │   └── AZ-305-cheat-sheet.md
 │   └── GH-300/
-│       └── GH-300-cheat-sheet.md  # Study reference (questions TBD)
+│       ├── categories.json
+│       ├── questions.json
+│       └── GH-300-cheat-sheet.md
 └── tests/
-    └── quiz.test.js         # Unit tests
+  └── quiz.test.js         # Unit tests
 ```
 
 ## Adding a New Exam
